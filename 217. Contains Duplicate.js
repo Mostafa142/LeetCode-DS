@@ -1,14 +1,18 @@
 /**
  * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
+ * @return {boolean}
  */
-var twoSum = function(nums, target) {
-      for(let i=0;i<nums.length;i++){
-        for(let j=i+1;j<nums.length;j++){
-            if(nums[i]+nums[j]==target){
-             return [i,j]
-           }
-        }
-    }
+var containsDuplicate = function(arr) {
+     let result = false;
+      // create a Set with array elements
+      const s = new Set(arr);
+      // compare the size of array and Set
+      if(arr.length !== s.size){
+         result = true;
+      }
+      if(result) {
+         return true;
+      } else {
+        return false;
+      }
 };
